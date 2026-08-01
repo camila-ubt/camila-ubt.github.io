@@ -1,5 +1,7 @@
 # Camila Santos — Portfólio
 
+🌐 **Página publicada:** [Acessar meu portfólio](https://camila-ubt.github.io/)
+
 Este repositório reúne meu portfólio pessoal, com projetos desenvolvidos nas áreas de tecnologia, dados e gestão.
 
 Sou formada em Gestão da Tecnologia da Informação e atualmente curso Ciência de Dados. Tenho interesse em análise de dados, desenvolvimento web e criação de ferramentas que transformem informações do dia a dia em apoio prático para organização, acompanhamento de resultados e tomada de decisão.
