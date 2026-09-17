@@ -1,303 +1,210 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camila Santos</title>
-
-<style>
-
-*{
-box-sizing:border-box;
-}
-
-html{
--webkit-text-size-adjust:100%;
-}
-
-body{
-font-family:Arial,sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-line-height:1.5;
-min-height:100vh;
-}
-
-.container{
-width:min(100%,1080px);
-margin:auto;
-padding:40px 28px;
-}
-
-header{
-text-align:center;
-margin-bottom:40px;
-}
-
-header img{
-width:160px;
-height:160px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #38bdf8;
-}
-
-h1{
-margin:15px 0 8px;
-font-size:32px;
-}
-
-h2{
-font-size:24px;
-}
-
-.subtitle{
-color:#cbd5f5;
-max-width:760px;
-margin:0 auto;
-}
-
-.buttons{
-margin-top:20px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.buttons a{
-text-decoration:none;
-background:#38bdf8;
-color:#0f172a;
-padding:10px 18px;
-border-radius:8px;
-font-weight:bold;
-display:inline-block;
-}
-
-.section{
-margin-top:50px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
-min-width:0;
-}
-
-.card h3{
-margin-top:0;
-color:#38bdf8;
-}
-
-.card p{
-margin-bottom:12px;
-}
-
-.project-link{
-display:inline-block;
-margin-top:8px;
-padding:9px 15px;
-border-radius:8px;
-background:#38bdf8;
-color:#0f172a;
-font-weight:bold;
-text-decoration:none;
-}
-
-.project-link:hover{
-background:#7dd3fc;
-}
-
-.footer{
-text-align:center;
-margin-top:60px;
-color:#94a3b8;
-}
-
-@media (max-width:700px){
-.container{
-padding:28px 18px 36px;
-}
-
-header{
-margin-bottom:32px;
-}
-
-header img{
-width:120px;
-height:120px;
-}
-
-h1{
-font-size:28px;
-}
-
-h2{
-font-size:22px;
-}
-
-.subtitle{
-font-size:15px;
-}
-
-.section{
-margin-top:36px;
-}
-
-.cards{
-grid-template-columns:1fr;
-gap:14px;
-}
-
-.card{
-padding:18px;
-}
-
-.buttons a{
-flex:1 1 95px;
-max-width:150px;
-text-align:center;
-}
-}
-
-@media (max-width:380px){
-.container{
-padding-left:14px;
-padding-right:14px;
-}
-
-.buttons{
-gap:8px;
-}
-
-.buttons a{
-padding:10px 12px;
-font-size:14px;
-}
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Camila Nascimento dos Santos — Ciência de Dados, desenvolvimento web e banco de dados.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Camila Nascimento | Dados e Desenvolvimento</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1220'/%3E%3Cpath d='M43 20a17 17 0 1 0 0 24' fill='none' stroke='%2338bdf8' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root { --bg:#0b1220; --surface:rgba(24,36,57,.76); --line:rgba(148,163,184,.18); --text:#f8fafc; --muted:#a9b7ca; --blue:#38bdf8; --blue-soft:#7dd3fc; --shadow:0 24px 70px rgba(0,0,0,.28); --radius:24px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+    body { margin:0; color:var(--text); background:radial-gradient(circle at 82% 8%,rgba(56,189,248,.13),transparent 28rem),radial-gradient(circle at 10% 32%,rgba(14,116,144,.11),transparent 25rem),var(--bg); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; }
+    a { color:inherit; }
+    img { display:block; max-width:100%; }
+    .container { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    .skip-link { position:fixed; left:16px; top:-80px; z-index:100; padding:10px 16px; background:var(--blue); color:var(--bg); border-radius:10px; font-weight:800; }
+    .skip-link:focus { top:16px; }
+    .topbar { position:sticky; top:0; z-index:20; border-bottom:1px solid var(--line); background:rgba(11,18,32,.78); backdrop-filter:blur(18px); }
+    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { text-decoration:none; font-weight:850; letter-spacing:-.04em; font-size:1.08rem; }
+    .brand span { color:var(--blue); }
+    .nav-links { display:flex; align-items:center; gap:24px; }
+    .nav-links a { color:var(--muted); text-decoration:none; font-size:.94rem; font-weight:650; transition:color .2s ease; }
+    .nav-links a:hover,.nav-links a:focus-visible { color:var(--blue-soft); }
+    .hero { min-height:690px; display:grid; grid-template-columns:1.25fr .75fr; gap:64px; align-items:center; padding:84px 0 96px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; margin:0 0 18px; color:var(--blue-soft); font-size:.82rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:28px; height:2px; background:var(--blue); border-radius:99px; }
+    h1,h2,h3 { line-height:1.12; letter-spacing:-.04em; }
+    h1 { max-width:760px; margin:0; font-size:clamp(2.65rem,5.4vw,4.5rem); }
+    h1 span { color:var(--blue); }
+    .hero-copy>p:not(.eyebrow) { max-width:690px; margin:24px 0 0; color:var(--muted); font-size:1.15rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:0 20px; border:1px solid transparent; border-radius:12px; text-decoration:none; font-weight:800; transition:transform .2s ease,background .2s ease,border-color .2s ease; }
+    .button:hover { transform:translateY(-2px); }
+    .button-primary { background:var(--blue); color:#07111e; }
+    .button-primary:hover { background:var(--blue-soft); }
+    .button-secondary { border-color:var(--line); background:rgba(255,255,255,.035); color:var(--text); }
+    .button-secondary:hover { border-color:rgba(56,189,248,.55); background:rgba(56,189,248,.07); }
+    .portrait-wrap { position:relative; width:min(360px,100%); margin-left:auto; }
+    .portrait-wrap::before { content:""; position:absolute; inset:-18px 16px 18px -18px; border:1px solid rgba(56,189,248,.42); border-radius:34px; transform:rotate(-4deg); }
+    .portrait { position:relative; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center; border-radius:30px; border:1px solid var(--line); box-shadow:var(--shadow); background:#182439; }
+    .portrait-note { position:absolute; right:-25px; bottom:28px; width:210px; padding:15px 17px; border:1px solid rgba(56,189,248,.25); border-radius:16px; background:rgba(17,27,46,.92); box-shadow:0 16px 36px rgba(0,0,0,.24); backdrop-filter:blur(12px); }
+    .portrait-note strong { display:block; color:var(--blue-soft); font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
+    .portrait-note span { display:block; margin-top:3px; color:#dbe7f4; font-size:.9rem; line-height:1.4; }
+    section { padding:96px 0; }
+    .section-border { border-top:1px solid var(--line); }
+    .section-heading { display:grid; grid-template-columns:.72fr 1.28fr; gap:56px; align-items:end; margin-bottom:44px; }
+    .section-heading h2 { margin:0; font-size:clamp(1.9rem,3.7vw,3rem); }
+    .section-heading p { margin:0; color:var(--muted); font-size:1.05rem; }
+    .about-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:26px; }
+    .panel { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:0 16px 48px rgba(0,0,0,.12); }
+    .about-text { padding:34px; }
+    .about-text p { margin:0; color:#d5deea; font-size:1.08rem; }
+    .about-text p+p { margin-top:17px; }
+    .facts { display:grid; gap:1px; overflow:hidden; background:var(--line); }
+    .fact { padding:23px 26px; background:#111b2e; }
+    .fact small { display:block; color:var(--blue-soft); font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .fact span { display:block; margin-top:4px; color:#e7eef7; }
+    .academic-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .academic-card { position:relative; overflow:hidden; padding:34px; }
+    .academic-card::after { content:attr(data-number); position:absolute; right:20px; top:-28px; color:rgba(56,189,248,.055); font-size:9rem; font-weight:900; line-height:1; }
+    .project-label { position:relative; z-index:1; color:var(--blue-soft); font-weight:800; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; }
+    .academic-card h3 { position:relative; z-index:1; margin:17px 0 13px; font-size:1.45rem; }
+    .academic-card>p { position:relative; z-index:1; margin:0; color:var(--muted); }
+    .role-box { position:relative; z-index:1; margin:24px 0; padding:17px; border-left:3px solid var(--blue); background:rgba(56,189,248,.06); border-radius:0 12px 12px 0; }
+    .role-box strong { display:block; margin-bottom:5px; color:var(--blue-soft); }
+    .role-box p { margin:0; color:#d8e2ee; font-size:.94rem; }
+    .tags { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0; }
+    .tag { padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:#bed0e1; font-size:.78rem; font-weight:700; background:rgba(255,255,255,.025); }
+    .card-actions { position:relative; z-index:1; display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:27px; }
+    .text-link { color:var(--blue-soft); text-decoration:none; font-weight:800; }
+    .text-link:hover { color:white; }
+    .work-intro { max-width:780px; margin:-18px 0 46px; color:var(--muted); font-size:1.07rem; }
+    .work-list { display:grid; gap:28px; }
+    .work-card { display:grid; grid-template-columns:1.05fr .95fr; overflow:hidden; }
+    .work-card:nth-child(even) .project-image { order:2; }
+    .project-image { min-height:390px; background:#0d1626; overflow:hidden; border-right:1px solid var(--line); }
+    .work-card:nth-child(even) .project-image { border-right:0; border-left:1px solid var(--line); }
+    .project-image img { width:100%; height:100%; min-height:390px; object-fit:cover; object-position:top center; transition:transform .5s ease; }
+    .work-card:hover .project-image img { transform:scale(1.025); }
+    .work-content { display:flex; flex-direction:column; justify-content:center; padding:42px; }
+    .work-content h3 { margin:12px 0 14px; font-size:clamp(1.55rem,2.4vw,2.1rem); }
+    .work-content>p { margin:0; color:var(--muted); }
+    .feature-list { display:grid; gap:9px; margin:22px 0 0; padding:0; list-style:none; }
+    .feature-list li { position:relative; padding-left:22px; color:#d4dfeb; font-size:.94rem; }
+    .feature-list li::before { content:""; position:absolute; left:0; top:.65em; width:8px; height:8px; border-radius:50%; background:var(--blue); box-shadow:0 0 0 4px rgba(56,189,248,.1); }
+    .tech-cloud { display:flex; flex-wrap:wrap; gap:12px; }
+    .tech-cloud span { padding:12px 17px; border:1px solid var(--line); border-radius:13px; background:rgba(255,255,255,.035); color:#dce7f2; font-weight:750; }
+    .contact { padding-bottom:40px; }
+    .contact-box { padding:56px; text-align:center; background:linear-gradient(135deg,rgba(56,189,248,.13),rgba(24,36,57,.8) 56%); }
+    .contact-box h2 { margin:0 auto; max-width:720px; font-size:clamp(1.9rem,3.7vw,3rem); }
+    .contact-box p { max-width:650px; margin:18px auto 28px; color:var(--muted); }
+    footer { padding:30px 0 42px; color:#8191a6; font-size:.9rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); padding-top:28px; }
+    @media (max-width:900px) {
+      .nav-links a:not(.nav-contact) { display:none; }
+      .hero { grid-template-columns:1fr; min-height:auto; padding:72px 0 84px; }
+      .portrait-wrap { width:min(360px,84%); margin:0 auto; }
+      .section-heading,.about-grid { grid-template-columns:1fr; gap:24px; }
+      .academic-grid { grid-template-columns:1fr; }
+      .work-card { grid-template-columns:1fr; }
+      .work-card:nth-child(even) .project-image { order:0; }
+      .project-image,.work-card:nth-child(even) .project-image { border:0; border-bottom:1px solid var(--line); }
+      .project-image,.project-image img { min-height:300px; }
+    }
+    @media (max-width:600px) {
+      .container { width:min(100% - 28px,1120px); }
+      .nav { min-height:64px; }
+      .nav-contact { padding:8px 12px; border:1px solid var(--line); border-radius:9px; }
+      h1 { font-size:clamp(2.3rem,11.5vw,3.3rem); }
+      .hero { gap:52px; padding-top:60px; }
+      .portrait-note { right:-8px; bottom:18px; width:190px; }
+      section { padding:72px 0; }
+      .section-heading { margin-bottom:32px; }
+      .about-text,.academic-card,.work-content { padding:25px; }
+      .project-image,.project-image img { min-height:220px; }
+      .contact-box { padding:40px 24px; }
+      .footer-inner { flex-direction:column; gap:6px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms !important; } }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<header>
-
-<img src="foto.png" alt="Foto de Camila Santos">
-
-<h1>Camila Santos</h1>
-
-<p class="subtitle">
-Estudante de Ciência de Dados • Gestão de TI • Desenvolvimento de soluções baseadas em dados
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/camila-ubt" target="_blank">GitHub</a>
-
-<a href="mailto:cnstos+contato@gmail.com">Email</a>
-
-<a href="https://www.linkedin.com/in/camila-n-santos-587a77322/" target="_blank">LinkedIn</a>
-
-</div>
-
-</header>
-
-<div class="section">
-
-<h2>Sobre mim</h2>
-
-<p>
-Sou formada em Gestão de Tecnologia da Informação e atualmente estudante de Ciência de Dados.
-Tenho interesse em análise de dados, desenvolvimento de ferramentas digitais e criação de
-soluções que ajudem empresas a entender melhor seus resultados e melhorar sua gestão.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>Projetos</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Calculadora de Metas</h3>
-<p>
-Sistema web para calcular metas individuais de equipes de vendas por loja e período,
-considerando dias trabalhados sozinha ou em dupla, valores vendidos e dias restantes.
-</p>
-<a class="project-link" href="https://camila-ubt.github.io/calculo-metas/" target="_blank" rel="noopener noreferrer">Abrir projeto</a>
-</div>
-
-<div class="card">
-<h3>Líder Metas</h3>
-<p>
-Sistema de gestão de desempenho comercial com lançamento de vendas, acompanhamento de metas,
-projeções, ranking por loja e período, conferência com relatórios e análises gerenciais.
-</p>
-<a class="project-link" href="https://metas-lider.vercel.app" target="_blank" rel="noopener noreferrer">Abrir projeto</a>
-</div>
-
-<div class="card">
-<h3>Cálculo PA</h3>
-<p>
-Aplicação web para lançamento, cálculo e acompanhamento do PA das vendedoras, com registros por loja,
-histórico mensal, resumo de desempenho, regras de premiação e conferência administrativa.
-</p>
-<a class="project-link" href="https://calculo-pa.vercel.app" target="_blank" rel="noopener noreferrer">Abrir projeto</a>
-</div>
-
-<div class="card">
-<h3>Análise de Dados</h3>
-<p>
-Projetos de análise de dados desenvolvidos durante a graduação em Ciência de Dados.
-</p>
-</div>
-
-<div class="card">
-<h3>Ferramentas Web</h3>
-<p>
-Desenvolvimento de pequenas aplicações para organização e gestão de informações.
-</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Portfólio</h2>
-
-<p>
-🚧 Esta seção está em desenvolvimento.
-Novos projetos e estudos serão adicionados em breve.
-</p>
-
-</div>
-
-<div class="footer">
-
-<p>© Camila N Santos</p>
-
-</div>
-
-</div>
-
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio">Camila<span>.</span></a>
+      <div class="nav-links"><a href="#sobre">Sobre</a><a href="#academicos">Projetos acadêmicos</a><a href="#solucoes">Soluções</a><a class="nav-contact" href="#contato">Contato</a></div>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero container" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Dados · Sistemas · Gestão</p>
+        <h1>Camila Nascimento <span>dos Santos</span></h1>
+        <p>Estudante de Ciência de Dados e formada em Gestão de Tecnologia da Informação. Transformo necessidades reais de trabalho em sistemas, bancos de dados e informações que apoiam decisões.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#solucoes">Conhecer meus projetos <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://github.com/camila-ubt" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/camila-n-santos-587a77322/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img class="portrait" src="foto.png" alt="Camila Nascimento dos Santos">
+        <div class="portrait-note"><strong>Foco atual</strong><span>Ciência de Dados, desenvolvimento web e banco de dados</span></div>
+      </div>
+    </section>
+    <section class="section-border" id="sobre">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Sobre mim</p><h2>Tecnologia com contexto real</h2></div><p>Minha experiência une rotina operacional, liderança comercial e desenvolvimento de soluções. Isso me ajuda a entender o problema antes de escolher a tecnologia.</p></div>
+        <div class="about-grid">
+          <article class="panel about-text"><p>Sou formada em Gestão de Tecnologia da Informação e curso Ciência de Dados na UNIVESP. Tenho interesse especial em banco de dados, análise de informações e aplicações web.</p><p>No trabalho, acompanho vendas, metas e indicadores de três lojas. A partir dessas necessidades, desenvolvi ferramentas próprias para substituir controles dispersos, automatizar cálculos e tornar os resultados mais fáceis de consultar.</p></article>
+          <aside class="panel facts" aria-label="Resumo profissional"><div class="fact"><small>Formação</small><span>Gestão de TI e Ciência de Dados</span></div><div class="fact"><small>Experiência aplicada</small><span>Vendas, indicadores e gestão</span></div><div class="fact"><small>Interesses</small><span>Dados, bancos e sistemas web</span></div></aside>
+        </div>
+      </div>
+    </section>
+    <section class="section-border" id="academicos">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">UNIVESP</p><h2>Projetos acadêmicos</h2></div><p>Projetos integradores desenvolvidos em equipe para atender necessidades reais, com minha atuação concentrada em banco de dados e organização técnica.</p></div>
+        <div class="academic-grid">
+          <article class="panel academic-card" data-number="01">
+            <span class="project-label">Projeto Integrador I</span><h3>Sistema de Controle de Caixa</h3><p>Aplicação para apoiar o controle de vendas, produtos, estoque e fluxo financeiro de uma microempreendedora.</p>
+            <div class="role-box"><strong>Minha atuação</strong><p>Colaboradora do projeto e responsável pela modelagem e implementação do banco de dados no Supabase.</p></div>
+            <div class="tags" aria-label="Tecnologias do Projeto Integrador I"><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">JavaScript</span></div>
+            <div class="card-actions"><a class="text-link" href="https://projeto-integrador1-azure.vercel.app" target="_blank" rel="noopener noreferrer">Abrir sistema ↗</a><a class="text-link" href="https://github.com/camila-ubt/projeto-integrador1" target="_blank" rel="noopener noreferrer">Ver repositório ↗</a></div>
+          </article>
+          <article class="panel academic-card" data-number="02">
+            <span class="project-label">Projeto Integrador II</span><h3>Paola Studio</h3><p>Sistema em desenvolvimento para centralizar agenda, clientes, serviços, histórico de atendimentos e informações financeiras.</p>
+            <div class="role-box"><strong>Minha atuação</strong><p>Administradora do repositório, responsável pelo fluxo de colaboração no GitHub e pela modelagem e implementação do banco PostgreSQL no Neon.</p></div>
+            <div class="tags" aria-label="Tecnologias do Projeto Integrador II"><span class="tag">Next.js</span><span class="tag">JavaScript</span><span class="tag">PostgreSQL</span><span class="tag">Neon</span><span class="tag">Vercel</span></div>
+            <div class="card-actions"><a class="text-link" href="https://paolastudio.vercel.app" target="_blank" rel="noopener noreferrer">Abrir sistema ↗</a><a class="text-link" href="https://github.com/camila-ubt/projeto-integrador-2" target="_blank" rel="noopener noreferrer">Ver repositório ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section-border" id="solucoes">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Experiência aplicada</p><h2>Soluções para gestão de vendas</h2></div><p>Três aplicações desenvolvidas a partir de problemas que acompanho diariamente na supervisão das lojas.</p></div>
+        <p class="work-intro">Juntas, elas formam um pequeno ecossistema: as vendedoras acompanham seus resultados, enquanto a liderança centraliza metas, lançamentos, conferências e indicadores.</p>
+        <div class="work-list">
+          <article class="panel work-card">
+            <div class="project-image"><img src="assets/lider-metas.png" alt="Painel de desempenho do sistema Líder Metas" loading="lazy"></div>
+            <div class="work-content"><span class="project-label">Gestão e indicadores</span><h3>Líder Metas</h3><p>Sistema interno para consolidar vendas, metas, PA e informações gerenciais das três lojas.</p><ul class="feature-list"><li>Painéis, projeções, ranking e comparativos</li><li>Conferência de vendas e do PA das vendedoras</li><li>Controle de acesso e integração com as outras ferramentas</li></ul><div class="card-actions"><a class="button button-primary" href="https://metas-lider.vercel.app" target="_blank" rel="noopener noreferrer">Abrir sistema ↗</a><a class="text-link" href="https://github.com/camila-ubt/lider-metas" target="_blank" rel="noopener noreferrer">Código e documentação ↗</a></div></div>
+          </article>
+          <article class="panel work-card">
+            <div class="project-image"><img src="assets/calculadora-metas.png" alt="Resultado da Calculadora de Metas" loading="lazy"></div>
+            <div class="work-content"><span class="project-label">Metas individuais</span><h3>Calculadora de Metas</h3><p>Ferramenta para cada vendedora acompanhar quanto já vendeu e o que precisa alcançar durante o mês.</p><ul class="feature-list"><li>Cálculo de Meta, Super e Mega</li><li>Escala por loja, turno e trabalho em dupla</li><li>Valor restante e média necessária por dia</li></ul><div class="card-actions"><a class="button button-primary" href="https://camila-ubt.github.io/calculo-metas/" target="_blank" rel="noopener noreferrer">Abrir sistema ↗</a><a class="text-link" href="https://github.com/camila-ubt/calculo-metas" target="_blank" rel="noopener noreferrer">Código e documentação ↗</a></div></div>
+          </article>
+          <article class="panel work-card">
+            <div class="project-image"><img src="assets/calculo-pa.jpg" alt="Painel do sistema Cálculo PA" loading="lazy"></div>
+            <div class="work-content"><span class="project-label">Desempenho de vendas</span><h3>Cálculo PA</h3><p>Aplicação para registrar vendas e peças, calcular automaticamente o PA e acompanhar a premiação mensal.</p><ul class="feature-list"><li>Lançamentos diários por vendedora e loja</li><li>Histórico, calendário e resumo mensal</li><li>Regras de premiação e conferência administrativa</li></ul><div class="card-actions"><a class="button button-primary" href="https://calculo-pa.vercel.app" target="_blank" rel="noopener noreferrer">Abrir sistema ↗</a><a class="text-link" href="https://github.com/camila-ubt/calculo-pa" target="_blank" rel="noopener noreferrer">Código e documentação ↗</a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section-border" aria-labelledby="tecnologias">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Ferramentas</p><h2 id="tecnologias">Tecnologias</h2></div><p>Tecnologias que utilizo nos projetos acadêmicos e nas aplicações desenvolvidas para o trabalho.</p></div>
+        <div class="tech-cloud" aria-label="Lista de tecnologias"><span>JavaScript</span><span>Next.js</span><span>React</span><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Supabase</span><span>Neon</span><span>Git</span><span>GitHub</span><span>Vercel</span><span>Recharts</span></div>
+      </div>
+    </section>
+    <section class="contact section-border" id="contato">
+      <div class="container"><div class="panel contact-box"><p class="eyebrow">Contato</p><h2>Vamos conversar sobre dados e tecnologia?</h2><p>Você pode conhecer mais do meu trabalho pelo GitHub, acompanhar minha trajetória no LinkedIn ou entrar em contato por e-mail.</p><div class="hero-actions" style="justify-content:center"><a class="button button-primary" href="mailto:cnstos+contato@gmail.com">Enviar e-mail</a><a class="button button-secondary" href="https://www.linkedin.com/in/camila-n-santos-587a77322/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>© 2026 Camila Nascimento dos Santos</span><span>Ubatuba, São Paulo</span></div></footer>
 </body>
 </html>
